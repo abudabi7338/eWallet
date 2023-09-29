@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eWallet</title>
+    <script src="https://kit.fontawesome.com/e10597cf0a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <header>
+
+        <h1><img src="./img/wallet.svg" alt="wallet"> Wallet</h1>
+        <p>Twój osobisty menadżer finasów</p>
+
+    </header>
+    <main>
+
+        <section class="transaction">
+
+
+
+            <h3 class="tittle">Lista transkacji</h3>
+
+            <div class="transaction-list">
+
+
+                <!-- //PRZYCHÓD -->
+                <div class="income-area">
+                    <h3 class="income-text">Przychód:</h3>
+                    <p> <img src="./img/cash-banknote.svg" alt="">Wypłata</p>
+                </div>
+
+                <!-- WYDATKI -->
+                <div class="expenses-area">
+                    <h3 class="expenses-text">Wydatki</h3>
+
+                    <div class="transaction" id="1">
+                        <p><img src="./img/cookie.svg" alt="">Jedzenie</p>
+                        <p class="transacion-amount">-400 zł</p>
+
+                    </div>
+                    <div class="transaction" id="2">
+                        <p><img src="./img/shopping-cart.svg" alt="">zaka</p>
+                        <p class="transacion-amount">-400 zł</p>
+                    </div>
+                    <div class="transaction" id="3">
+                        <p><img src="./img/cinema.svg" alt="">kino</p>
+                        <p class="transacion-amount">-400 zł</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            //DOSTEPNE ŚRODKI -->
+
+        <section class="options">
+            <h3 class="tittle">Dostępne środki</h3>
+            <p class="available-money">0 zł</p>
+
+            <div class="controls">
+                <button class="add-transaction"><img src="./img/plus.svg" alt="">Dodaj
+                    Transakcje</button>
+                <button class="delete-all"><img src="./img/trash.svg" alt="">Wyczyść Wszystko</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- POPUP -->
+    <div class="add-transaction-panel"></div>
+    <h2 class="add-transaction-panel-tittle">Dodaj Nową Transakcje</h2>
+
+    <label for="name">Nazwa</label>
+    <small>(Podaj nazwę transakcji)</small>
+    <input type="text" id="name">
+
+    <label for="amount">Nazwa</label>
+    <small>(Podaj kwotę)</small>
+    <input type="number" id="amount">
+
+    <label for="category"></label>
+    <small>( [ + ] oznacza przychód, [ - ] oznacza wydatki)</small>
+    <select id="category">
+        <option value="none" selected disabled></option>
+        <option value="income">[ + ] Przychód</option>
+        <option value="shopping">[ - ] Zakupy</option>
+        <option value="food">[ - ] Jedzenie</option>
+        <option value="cinema">[ - ]Kino </option>
+    </select>
+
+    <div class="panel-buttons">
+        <buttons class="save"><img src="./img/save.svg" alt="">Zapisz</buttons>
+        <buttons class="cancel"><img src="./img/cancel.svg" alt="">Anuluj</buttons>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
