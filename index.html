@@ -12,43 +12,55 @@
 <body>
     <header>
 
-        <h1><img src="./img/wallet.svg" alt="wallet"> Wallet</h1>
+        <h1><i class="fa-solid fa-wallet"></i> Wallet</h1>
         <p>Twój osobisty menadżer finasów</p>
 
     </header>
     <main>
 
-        <section class="transaction">
+        <section class="transactions">
 
 
 
-            <h3 class="tittle">Lista transkacji</h3>
+            <h2 class="tittle">Lista transkacji</h2>
+
+
 
             <div class="transaction-list">
-
-
                 <!-- //PRZYCHÓD -->
                 <div class="income-area">
+
                     <h3 class="income-text">Przychód:</h3>
-                    <p> <img src="./img/cash-banknote.svg" alt="">Wypłata</p>
+                    <div class="transaction" id="0">
+
+                        <p class="transaction-name"> <i class="fa-solid fa-money-bill"></i>Wypłata</p>
+                        <p class="transaction-amount">2000zł <button class="delete"><i
+                            class="fas fa-times"></i></button></p>
+
+                    </div>
                 </div>
+
 
                 <!-- WYDATKI -->
                 <div class="expenses-area">
                     <h3 class="expenses-text">Wydatki</h3>
 
                     <div class="transaction" id="1">
-                        <p><img src="./img/cookie.svg" alt="">Jedzenie</p>
-                        <p class="transacion-amount">-400 zł</p>
+                        <p class="transaction-name"><i class="fa-solid fa-utensils"></i>Jedzenie</p>
+                        <p class="transaction-amount">-400 zł <button class="delete"><i
+                            class="fas fa-times"></i></button></p>
+
 
                     </div>
                     <div class="transaction" id="2">
-                        <p><img src="./img/shopping-cart.svg" alt="">zaka</p>
-                        <p class="transacion-amount">-400 zł</p>
+                        <p class="transaction-name"><i class="fa-solid fa-cart-shopping"></i>zaka</p>
+                        <p class="transaction-amount">-400 zł <button class="delete"><i
+                            class="fas fa-times"></i></button></p>
                     </div>
                     <div class="transaction" id="3">
-                        <p><img src="./img/cinema.svg" alt="">kino</p>
-                        <p class="transacion-amount">-400 zł</p>
+                        <p class="transaction-name"><i class="fa-regular fa-futbol"></i>kino</p>
+                        <p class="transaction-amount">-400 zł <button class="delete"><i
+                            class="fas fa-times"></i></button></p>
                     </div>
 
                 </div>
@@ -71,7 +83,7 @@
     </main>
 
     <!-- POPUP -->
-    <div class="add-transaction-panel"></div>
+    <!-- <div class="add-transaction-panel"></div>
     <h2 class="add-transaction-panel-tittle">Dodaj Nową Transakcje</h2>
 
     <label for="name">Nazwa</label>
@@ -95,7 +107,7 @@
     <div class="panel-buttons">
         <buttons class="save"><img src="./img/save.svg" alt="">Zapisz</buttons>
         <buttons class="cancel"><img src="./img/cancel.svg" alt="">Anuluj</buttons>
-    </div>
+    </div> -->
 
 
     <script src="./js/script.js"></script>
