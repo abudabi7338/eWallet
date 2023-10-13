@@ -27,7 +27,7 @@
 
 
             <div class="transaction-list">
-                <!-- //PRZYCHÓD -->
+              
                 <div class="income-area">
 
                     <h3 class="income-text">Przychód:</h3>
@@ -41,7 +41,7 @@
                 </div>
 
 
-                <!-- WYDATKI -->
+              
                 <div class="expenses-area">
                     <h3 class="expenses-text">Wydatki</h3>
 
@@ -67,47 +67,51 @@
             </div>
         </section>
 
-        <!-- 
-            //DOSTEPNE ŚRODKI -->
+        
 
         <section class="options">
             <h3 class="tittle">Dostępne środki</h3>
             <p class="available-money">0 zł</p>
 
             <div class="controls">
-                <button class="add-transaction"><img src="./img/plus.svg" alt="">Dodaj
+                <button class="add-transaction"><i class="fa-solid fa-plus"></i>Dodaj
                     Transakcje</button>
-                <button class="delete-all"><img src="./img/trash.svg" alt="">Wyczyść Wszystko</button>
+                <button class="delete-all"><i class="fa-solid fa-trash"></i>Wyczyść Wszystko</button>
             </div>
         </section>
     </main>
 
-    <!-- POPUP -->
-    <!-- <div class="add-transaction-panel"></div>
-    <h2 class="add-transaction-panel-tittle">Dodaj Nową Transakcje</h2>
+    <!--
+        
+        POPUP -->
 
-    <label for="name">Nazwa</label>
-    <small>(Podaj nazwę transakcji)</small>
-    <input type="text" id="name">
+    <div class="popup none">
+        <div class="add-transaction-panel"></div>
+        <h2 class="add-transaction-panel-tittle">Dodaj Nową Transakcje</h2>
 
-    <label for="amount">Nazwa</label>
-    <small>(Podaj kwotę)</small>
-    <input type="number" id="amount">
+        <label for="name">Nazwa</label>
+        <small>(Podaj nazwę transakcji)</small>
+        <input type="text" id="name">
 
-    <label for="category"></label>
-    <small>( [ + ] oznacza przychód, [ - ] oznacza wydatki)</small>
-    <select id="category">
-        <option value="none" selected disabled></option>
-        <option value="income">[ + ] Przychód</option>
-        <option value="shopping">[ - ] Zakupy</option>
-        <option value="food">[ - ] Jedzenie</option>
-        <option value="cinema">[ - ]Kino </option>
-    </select>
+        <label for="amount">Nazwa</label>
+        <small>(Podaj kwotę)</small>
+        <input type="number" id="amount">
 
-    <div class="panel-buttons">
-        <buttons class="save"><img src="./img/save.svg" alt="">Zapisz</buttons>
-        <buttons class="cancel"><img src="./img/cancel.svg" alt="">Anuluj</buttons>
-    </div> -->
+        <label for="category">Wybierz Kategorię</label>
+        <small>( [ + ] oznacza przychód, [ - ] oznacza wydatki)</small>
+        <select id="category">
+            <option value="none" selected disabled></option>
+            <option value="income">[ + ] Przychód</option>
+            <option value="shopping">[ - ] Zakupy</option>
+            <option value="food">[ - ] Jedzenie</option>
+            <option value="cinema">[ - ]Kino </option>
+        </select>
+
+        <div class="panel-buttons">
+            <buttons class="save"><img src="./img/save.svg" alt="">Zapisz</buttons>
+            <buttons class="cancel"><img src="./img/cancel.svg" alt="">Anuluj</buttons>
+        </div>
+    </div>
 
 
     <script src="./js/script.js"></script>
