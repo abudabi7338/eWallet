@@ -27,7 +27,7 @@
 
 
             <div class="transaction-list">
-              
+
                 <div class="income-area">
 
                     <h3 class="income-text">Przychód:</h3>
@@ -35,39 +35,39 @@
 
                         <p class="transaction-name"> <i class="fa-solid fa-money-bill"></i>Wypłata</p>
                         <p class="transaction-amount">2000zł <button class="delete"><i
-                            class="fas fa-times"></i></button></p>
+                                    class="fas fa-times"></i></button></p>
 
                     </div>
                 </div>
 
 
-              
+
                 <div class="expenses-area">
                     <h3 class="expenses-text">Wydatki</h3>
 
                     <div class="transaction" id="1">
                         <p class="transaction-name"><i class="fa-solid fa-utensils"></i>Jedzenie</p>
                         <p class="transaction-amount">-400 zł <button class="delete"><i
-                            class="fas fa-times"></i></button></p>
+                                    class="fas fa-times"></i></button></p>
 
 
                     </div>
                     <div class="transaction" id="2">
                         <p class="transaction-name"><i class="fa-solid fa-cart-shopping"></i>zaka</p>
                         <p class="transaction-amount">-400 zł <button class="delete"><i
-                            class="fas fa-times"></i></button></p>
+                                    class="fas fa-times"></i></button></p>
                     </div>
                     <div class="transaction" id="3">
                         <p class="transaction-name"><i class="fa-regular fa-futbol"></i>kino</p>
                         <p class="transaction-amount">-400 zł <button class="delete"><i
-                            class="fas fa-times"></i></button></p>
+                                    class="fas fa-times"></i></button></p>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        
+
 
         <section class="options">
             <h3 class="tittle">Dostępne środki</h3>
@@ -92,10 +92,12 @@
         <label for="name">Nazwa</label>
         <small>(Podaj nazwę transakcji)</small>
         <input type="text" id="name">
+        <p class="error-message" id="name-error"></p> <!-- Komunikat o błędzie dla pola "name" -->
 
-        <label for="amount">Nazwa</label>
+        <label for="amount">Kwota</label>
         <small>(Podaj kwotę)</small>
         <input type="number" id="amount">
+        <p class="error-message" id="amount-error"></p> <!-- Komunikat o błędzie dla pola "amount" -->
 
         <label for="category">Wybierz Kategorię</label>
         <small>( [ + ] oznacza przychód, [ - ] oznacza wydatki)</small>
@@ -106,10 +108,12 @@
             <option value="food">[ - ] Jedzenie</option>
             <option value="cinema">[ - ]Kino </option>
         </select>
+        <p class="error-message" id="category-error"></p> <!-- Komunikat o błędzie dla pola "category" -->
+
 
         <div class="panel-buttons">
-            <buttons class="save"><img src="./img/save.svg" alt="">Zapisz</buttons>
-            <buttons class="cancel"><img src="./img/cancel.svg" alt="">Anuluj</buttons>
+            <button class="save"><i class="fa-solid fa-floppy-disk icon"></i>Zapisz</button>
+            <button class="cancel"><i class="fa-solid fa-xmark icon"></i>Anuluj</button>
         </div>
     </div>
 
