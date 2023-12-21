@@ -82,3 +82,62 @@ btnDeleteAll.addEventListener('click', deleteAll);
 btnSave.addEventListener('click', checkTextFields);
 btnAddTransaction.addEventListener('click', addTransaction);
 btnCancel.addEventListener('click', closeTransaction);
+
+// LOCAL STORAGE TEST
+
+// Funkcja do zapisywania danych do localStorage
+const saveDataToLocalStorage = () => {
+    localStorage.setItem('moneyArr', JSON.stringify(moneyArr));
+};
+
+// Funkcja do wczytywania danych z localStorage
+const loadDataFromLocalStorage = () => {
+    const storedData = localStorage.getItem('moneyArr');
+    if (storedData) {
+        moneyArr = JSON.parse(storedData);
+        count(moneyArr);
+    }
+};
+
+// ...
+
+// Po załadowaniu strony sprawdzamy, czy są zapisane dane w localStorage
+window.addEventListener('DOMContentLoaded', () => {
+    loadDataFromLocalStorage();
+});
+
+// ...
+
+const createNewTransaction = () => {
+    // ...
+
+    moneyArr.push(parseFloat(inputAmountValue));
+    count(moneyArr);
+
+    // Zapisujemy aktualne dane do localStorage po dodaniu transakcji
+    saveDataToLocalStorage();
+
+    closeTransaction();
+};
+
+const deleteTransaction = (button) => {
+    // ...
+
+    moneyArr = moneyArr.filter(amount => amount !== amountToDelete);
+    count(moneyArr);
+
+    // Zapisujemy aktualne dane do localStorage po usunięciu transakcji
+    saveDataToLocalStorage();
+};
+
+const deleteAll = () => {
+    // ...
+
+    moneyArr = [0];
+    count(moneyArr);
+
+    // Zapisujemy aktualne dane do localStorage po usunięciu wszystkich transakcji
+    saveDataToLocalStorage();
+};
+
+// ...
